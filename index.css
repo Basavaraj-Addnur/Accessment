@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  transition: all 0.2s ease;
+}
+
+body {
+  background: #f5f7fa;
+  overflow-x: hidden;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+.main-container {
+  padding-left: 240px;  /* Matches sidebar width */
+}
+
+.content-area {
+  padding: 24px;
+}
+
+.MuiAppBar-root {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.MuiToolbar-root {
+  min-height: 64px;
+}
+
+.MuiAppBar-root h6 {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.MuiDrawer-paper {
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.MuiListItemButton-root:hover {
+  background: rgba(255,255,255,0.1) !important;
+  border-radius: 8px;
+}
+
+.MuiPaper-root {
+  border-radius: 14px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06) !important;
+  background: #ffffff !important;
+}
+
+.filters-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.MuiTextField-root .MuiOutlinedInput-root:hover {
+  border-color: #2563eb;
+}
+
+.MuiTableContainer-root {
+  border-radius: 14px !important;
+}
+
+.MuiTableHead-root {
+  background: #111827;
+}
+
+.MuiBox-root{
+  color: #000;
+}
+
+.MuiTableHead-root th {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.MuiTableRow-root:hover {
+  transform: scale(1.01);
+}
+
+/* Table cells */
+.MuiTableCell-root {
+  padding: 14px 18px !important;
+  font-size: 15px;
+}
+
+/* Sort label highlight */
+.MuiTableSortLabel-root.Mui-active {
+  color: #60a5fa !important;
+}
+
+/* Pagination spacing */
+.MuiPagination-root {
+  padding: 16px;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth hover lift */
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1) !important;
+}
+
+@media (max-width: 900px) {
+  .filters-container {
+    flex-direction: column;
+  }
+
+  .main-container {
+    padding-left: 0;
+  }
+
+  .MuiDrawer-root {
+    display: none !important;
+  }
+}
